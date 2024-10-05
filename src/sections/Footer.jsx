@@ -2,7 +2,7 @@ import { facebook, instagram, twitter } from "../assets/icons"
 
 const Footer = () => {
   return (
-    <section className="bg-[#080808] -mt-10 text-white">
+    <section className="bg-[#080808] -mt-10 text-white p-6">
         <div className="flex justify-between items-center mx-auto max-w-5xl border-b border-b-[#666]">
             <h3 className="text-white font-bold text-2xl">
                 Rank
