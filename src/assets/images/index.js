@@ -9,6 +9,7 @@ import content from "./content-strategy.png"
 import about from "./About_Us_image.png"
 import contact from "./Rectangle_100.png"
 import heroImg from "./imageBg.jpg"
+import rankminded from "./rankminded.jpeg"
 
 export {
     myImage,
@@ -21,5 +22,6 @@ export {
     content,
     about,
     contact,
-    heroImg
+    heroImg,
+    rankminded
 }

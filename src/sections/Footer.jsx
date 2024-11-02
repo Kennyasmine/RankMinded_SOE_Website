@@ -1,4 +1,8 @@
+// import { Link } from "react-router-dom"
+// import { footer } from "../constants"
+
 import { facebook, instagram, twitter } from "../assets/icons"
+
 
 const Footer = () => {
   return (
@@ -8,10 +12,19 @@ const Footer = () => {
                 Rank
                 <span className="text-orange-600">Minded</span>
             </h3>
-            <div className="flex gap-3 w-5 h-5 mr-16 filter invert brightness-0 contrast-100 cursor-pointer">
-                <img src={facebook} alt="facebook icon" />
-                <img src={twitter} alt="twitter icon" />
-                <img src={instagram} alt="instagram icon" />
+            <div className="flex gap-3 w-5 h-5 mr-28 filter invert brightness-0 contrast-100 cursor-pointer">
+              <img src={facebook} alt="" />
+              <img src={twitter} alt="" />
+              <img src={instagram} alt="" />
+              {/* {footer.map((item) => (
+                <div key={item.alt}>
+                  <Link to={item.href}>
+                    <img src={item.icon} alt={item.alt} className="w-5 h-5
+                      filter invert brightness-0 contrast-100 cursor-pointer" />
+                      <p className="text-sm">{item.alt}</p>
+                  </Link>
+                </div>
+              ))} */}
             </div>
         </div>
         <div>

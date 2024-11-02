@@ -2,6 +2,7 @@ import { Link, NavLink } from "react-router-dom"
 import { navLinks } from "../constants"
 import { useState } from "react";
 import { hamburger } from "../assets/icons"
+// import { rankminded } from "../assets/images";
 
 const NavBar = () => {
     const [ isMenuOpen, setIsMenuOpen ] = useState(false);
@@ -14,6 +15,7 @@ const NavBar = () => {
         md:px-32 z-50 fixed top-0 left-0 w-full">
         <nav className="mx-auto flex items-center justify-between w-full px-4">
             <Link to="/" className="flex items-center">
+                {/* <img src={rankminded} alt="rankminded" height={50} width={50} /> */}
                 <h3 className="text-white font-bold text-2xl">
                     Rank
                     <span className="text-orange-600">Minded</span>

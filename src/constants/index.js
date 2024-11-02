@@ -1,4 +1,4 @@
-import { emailIcon, linkBuild, linkIcon, location, optimization, phone, research, roadMap, seoSearch } from "../assets/icons";
+import { emailIcon, facebook, instagram, linkBuild, linkIcon, location, optimization, phone, research, roadMap, seoSearch, twitter } from "../assets/icons";
 import { build, content, keyResearch, onPage, technical } from "../assets/images";
 
 export const navLinks = [
@@ -93,7 +93,6 @@ export const works = [
       ],
     },
   ];
-  
 
 export const reviews = [
     {
@@ -143,5 +142,23 @@ export const contacts = [
       icon: linkIcon,
       text: "www.upwork.com",
       href: "https://www.upwork.com/freelancers/~01c362567a5b8c2475?mp_source=share"
+  },
+]
+
+export const footer = [
+  {
+    icon: facebook,
+    href: "https://web.facebook.com/synergyKhams/",
+    alt: "facebook"
+  },
+  {
+    icon: twitter,
+    href: "https://x.com/rank_minded",
+    alt: "twitter"
+  },
+  {
+    icon: instagram,
+    href: "/",
+    alt: "instagram"
   },
 ]

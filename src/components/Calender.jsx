@@ -42,44 +42,45 @@ const Calender = () => {
   };
 
   const renderCells = () => {
-    const monthStart = startOfMonth(currentMonth);
-    const monthEnd = endOfMonth(monthStart);
-    const startDate = startOfWeek(monthStart);
-    const endDate = endOfWeek(monthEnd);
+  const monthStart = startOfMonth(currentMonth);
+  const monthEnd = endOfMonth(monthStart);
+  const startDate = startOfWeek(monthStart);
+  const endDate = endOfWeek(monthEnd);
 
-    const dateFormat = "d";
-    const rows = [];
-    let days = [];
-    let day = startDate;
-    let formattedDate = "";
+  const dateFormat = "d";
+  const rows = [];
+  let days = [];
+  let day = startDate;
+  let formattedDate = "";
 
-    while (day <= endDate) {
-      for (let i = 0; i < 7; i++) {
-        formattedDate = format(day, dateFormat);
-        const cloneDay = day;
+  while (day <= endDate) {
+    for (let i = 0; i < 7; i++) {
+      formattedDate = format(day, dateFormat);
+      const cloneDay = day;
 
-        days.push(
-          <div
-            key={day}
-            className={`text-center p-2 rounded-lg hover:bg-gray-200 transition-all cursor-pointer ${
-              !isSameMonth(day, monthStart)
-                ? "text-gray-400"
-                : isSameDay(day, selectedDate)
-                ? "bg-[#080808] text-white"
-                : "text-gray-800"
-            }`}
-            onClick={() => setSelectedDate(cloneDay)}
-          >
-            <span>{formattedDate}</span>
-          </div>
-        );
-        day = addDays(day, 1);
-      }
-      rows.push(<div className="grid grid-cols-7">{days}</div>);
-      days = [];
+      days.push(
+        <div
+          key={day.getTime()} 
+          className={`text-center p-2 rounded-lg hover:bg-gray-200 transition-all cursor-pointer ${
+            !isSameMonth(day, monthStart)
+              ? "text-gray-400"
+              : isSameDay(day, selectedDate)
+              ? "bg-[#080808] text-white"
+              : "text-gray-800"
+          }`}
+          onClick={() => setSelectedDate(cloneDay)}
+        >
+          <span>{formattedDate}</span>
+        </div>
+      );
+      day = addDays(day, 1);
     }
-    return <div>{rows}</div>;
-  };
+    rows.push(<div key={day.getTime()} className="grid grid-cols-7">{days}</div>);  {/* Ensure unique key for each row */}
+    days = [];
+  }
+  return <div>{rows}</div>;
+};
+
 
   return (
     <div className="flex-1">
