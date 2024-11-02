@@ -14,7 +14,7 @@ const AssessBlog = () => {
             Check your target keywords’ rankings on a regular basis. If they drop, adjust your content.
             </li>
             <li className="text-sm sm:text-base">
-                <span className="font-bold">User Behavior</span>: Use tools like Google Analytics to see how users interact with your site. High bounce rates or short sessions may mean your content isn’t meeting users’ expectations.
+                <span className="font-bold">User Behavior</span>: Use tools like Google Analytics to see how users interact with your site. High bounce rates or short sessions may mean your content isn’t meeting users’ expectations.
             </li>
             <li className="text-sm sm:text-base">
                 <span className="font-bold">Update your content</span>at regular intervals to keep it relevant. This could mean updating old info, adding new stats, or improving the article’s readability.

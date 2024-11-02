@@ -38,7 +38,7 @@ const Calender = () => {
         </div>
       );
     }
-    return <div className="grid grid-cols-7">{days}</div>;
+    return <div className="grid grid-cols-7 gap-10">{days}</div>;
   };
 
   const renderCells = () => {
@@ -75,7 +75,7 @@ const Calender = () => {
       );
       day = addDays(day, 1);
     }
-    rows.push(<div key={day.getTime()} className="grid grid-cols-7">{days}</div>);  {/* Ensure unique key for each row */}
+    rows.push(<div key={day.getTime()} className="grid grid-cols-7 gap-10">{days}</div>);  {/* Ensure unique key for each row */}
     days = [];
   }
   return <div>{rows}</div>;
